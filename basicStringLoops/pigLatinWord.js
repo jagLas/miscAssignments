@@ -22,7 +22,7 @@ function pigLatinWord(word) {
         //Rearrange string
         pigWord = word.slice(firstVowel) + word.slice(0, firstVowel) + "ay";
     }
-    return pigWord
+    return pigWord;
   };
   
   console.log(pigLatinWord("apple")); //=> "appleyay"
