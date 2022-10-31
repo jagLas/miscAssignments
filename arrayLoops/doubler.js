@@ -3,7 +3,7 @@ function doubler(numbers) {
     for (let i = 0; i < numbers.length; i ++) {
         numbers[i] *= 2;
     }
-    return numbers
+    return numbers;
 }
 
 console.log(doubler([1, 2, 3, 4])); // => [2, 4, 6, 8]
