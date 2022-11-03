@@ -3,21 +3,20 @@ function pyramidArray(base) {
     newArray.push(base);
 
     let nextRow = [];
-    //need to fix loop
-    for (let i = 0; i < newArray.length; i++) {
-        console.log(`i = ${i}`);
+
+    for (let i = 0; newArray[0].length > 1; ) {
+        // console.log(`i = ${i}`);
+        let nextRow = [];
         for (let j = 0; j < newArray[i].length - 1; j++){
-            console.log(`       j = ${j}`)
+            // console.log(`       j = ${j}`)
             let num1 = newArray[i][j];
             let num2 = newArray[i][j+1];
 
             nextRow.push(num1 + num2);
-            console.log(`       ${nextRow}`)
+            // console.log(`       ${nextRow}`)
         }
-
+        newArray.unshift(nextRow);
     }
-
-    newArray.unshift(nextRow);
 
     return newArray;
 }
@@ -45,5 +44,20 @@ console.log(p1);
 //   [ 2, 3, 7, 5, 9 ]
 // ]
 
-// let p2 = pyramidArray([2, 2, 2, 2]);
-// console.log(p2);
+let p2 = pyramidArray([2, 2, 2, 2]);
+console.log(p2);
+// [
+//   [ 16 ],
+//   [ 8, 8 ],
+//   [ 4, 4, 4 ],
+//   [ 2, 2, 2, 2 ]
+// ]
+
+let p3 = pyramidArray([2, 2, 2, 2, 2, 2]);
+console.log(p3);
+// [
+//   [ 16 ],
+//   [ 8, 8 ],
+//   [ 4, 4, 4 ],
+//   [ 2, 2, 2, 2 ]
+// ]
